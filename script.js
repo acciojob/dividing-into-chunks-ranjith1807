@@ -2,21 +2,21 @@ const arr = [1, 2, 3, 4, 1, 0, 2, 2];
 const divide = (arr, n) => {
   // Write your code here
 	let res=[]
-	let arr=[]
+	let subarr=[]
 	let sum=0;
 	for(let num of arr){
 		if(sum+num>n){
-			res.push(arr);
-			arr=[num]
+			res.push(subarr);
+			subarr=[num]
 			sum=num
 		}
 		else{
-			arr.push(num)
+			subarr.push(num)
 			sum+=num;
 			}
 	}
-	if (arr.length > 0) {
-    res.push(arr);
+	if (subarr.length > 0) {
+    res.push(subarr);
   }
   return res;
 };
